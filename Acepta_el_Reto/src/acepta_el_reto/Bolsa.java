@@ -29,8 +29,8 @@ public class Bolsa {
             if (contCops >= cops) {
                 break;
             }
-            cont=0;
-            
+            cont = 0;
+
             fin = ent.nextInt();
             numero = ent.skip("[\r\n]*").nextLine();
 
@@ -42,15 +42,17 @@ public class Bolsa {
 
             for (int i = 0; i < numero.length(); i++) {
                 suma = digit[i];
+                if (digit[i] != 0) {
 
-                for (int j = i + 1; j < numero.length(); j++) {
-                    if (suma + digit[j] < fin) {
-                        suma += digit[j];
-                    } else {
-                        if ((suma += digit[j]) == fin) {
-                            cont++;
+                    for (int j = i + 1; j < numero.length(); j++) {
+                        if (suma + digit[j] < fin) {
+                            suma += digit[j];
                         } else {
-                            break;
+                            if ((suma += digit[j]) == fin) {
+                                cont++;
+                            } else {
+                                break;
+                            }
                         }
                     }
                 }
