@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package acepta_el_reto;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
