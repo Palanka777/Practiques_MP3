@@ -21,17 +21,17 @@ public class PortemUna {
 
         numero1 = ent.nextLine();
         num1 = new int[numero1.length()];
-        num1 = toStringInt(numero1);
+        num1 = intToString(numero1);
 
         numero2 = ent.nextLine();
         num2 = new int[numero2.length()];
-        num2 = toStringInt(numero2);
+        num2 = intToString(numero2);
 
         System.out.println(quantesEnPortem(num1, num2));
 
     }
 
-    private static int[] toStringInt(String num1) {
+    private static int[] intToString(String num1) {
         int[] num3 = new int[num1.length()];
         for (int i = 0; i < num1.length(); i++) {
             num3[i] = Integer.parseInt("" + num1.charAt(i));
